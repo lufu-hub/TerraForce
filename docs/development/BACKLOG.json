@@ -8,7 +8,7 @@
       "title": "Ortam ve repo incelemesi",
       "depends_on": [],
       "acceptance": "Araç/donanım, yerel ve remote Git durumu, mevcut prototip, engeller ve onay gerektiren kararlar raporlandı.",
-      "status": "planned"
+      "status": "in_progress"
     },
     {
       "id": "TF-001",
