@@ -1,0 +1,145 @@
+{
+  "version": "1.0",
+  "status": "planning",
+  "tasks": [
+    {
+      "id": "TF-000",
+      "phase": "0",
+      "title": "Ortam ve repo incelemesi",
+      "depends_on": [],
+      "acceptance": "Araç/donanım, yerel ve remote Git durumu, mevcut prototip, engeller ve onay gerektiren kararlar raporlandı.",
+      "status": "planned"
+    },
+    {
+      "id": "TF-001",
+      "phase": "0",
+      "title": "UE C++ iskeleti ve Git LFS",
+      "depends_on": [
+        "TF-000"
+      ],
+      "acceptance": "Onaylı çalışma alanında boş oyun derlendi, açıldı, geri dönüş noktası var.",
+      "status": "planned"
+    },
+    {
+      "id": "TF-002",
+      "phase": "0",
+      "title": "Build/test/editor otomasyonu",
+      "depends_on": [
+        "TF-001"
+      ],
+      "acceptance": "Tekrarlanabilir build, hedefli test, log özeti, küçük editor automation örneği.",
+      "status": "planned"
+    },
+    {
+      "id": "TF-003",
+      "phase": "1",
+      "title": "Sentetik arazi ve strateji kamerası",
+      "depends_on": [
+        "TF-002"
+      ],
+      "acceptance": "10 dönüm civarı arazide pan/zoom/rotate çalışıyor.",
+      "status": "planned"
+    },
+    {
+      "id": "TF-004",
+      "phase": "1",
+      "title": "Tek yapı ve Milestone 0",
+      "depends_on": [
+        "TF-003"
+      ],
+      "acceptance": "Yapı yerleştiriliyor, Windows build editör dışında açılıyor.",
+      "status": "planned"
+    },
+    {
+      "id": "TF-005",
+      "phase": "1",
+      "title": "Yapı kataloğu ve yerleşim",
+      "depends_on": [
+        "TF-004"
+      ],
+      "acceptance": "3–4 yapı, önizleme, eğim/çakışma, taşıma/kaldırma.",
+      "status": "planned"
+    },
+    {
+      "id": "TF-006",
+      "phase": "1",
+      "title": "Keşif modu",
+      "depends_on": [
+        "TF-003"
+      ],
+      "acceptance": "Strateji ve yaya keşif arasında geçiş.",
+      "status": "planned"
+    },
+    {
+      "id": "TF-007",
+      "phase": "1",
+      "title": "Zaman ve kayıt",
+      "depends_on": [
+        "TF-005",
+        "TF-006"
+      ],
+      "acceptance": "Gün akışı, kayıt/yükleme konumu ve yapıları koruyor.",
+      "status": "planned"
+    },
+    {
+      "id": "TF-008",
+      "phase": "1",
+      "title": "Prototype 0.1",
+      "depends_on": [
+        "TF-007"
+      ],
+      "acceptance": "Türkçe UI, düşük/orta grafik, regresyon ve Windows paketleme.",
+      "status": "planned"
+    },
+    {
+      "id": "TF-020",
+      "phase": "2",
+      "title": "İnşa ve depolama",
+      "depends_on": [
+        "TF-008"
+      ],
+      "acceptance": "Maliyetli inşa, yol/çit, depolama ve gelişim çalışıyor.",
+      "status": "planned"
+    },
+    {
+      "id": "TF-030",
+      "phase": "3",
+      "title": "Kaynak ve çevre döngüsü",
+      "depends_on": [
+        "TF-020"
+      ],
+      "acceptance": "Su/gıda/enerji, ekim/hasat, mevsim, kıtlık ölçülebilir.",
+      "status": "planned"
+    },
+    {
+      "id": "TF-040",
+      "phase": "4",
+      "title": "Aile ve karakter",
+      "depends_on": [
+        "TF-030"
+      ],
+      "acceptance": "Senaryolar, yaş, ihtiyaç, görev, olaylar ve kayıt doğrulanır.",
+      "status": "planned"
+    },
+    {
+      "id": "TF-050",
+      "phase": "5",
+      "title": "Gerçek arazi hattı",
+      "depends_on": [
+        "TF-040"
+      ],
+      "acceptance": "DEM import, güneş/iklim, PCG, veri kalite etiketi ve performans.",
+      "status": "planned"
+    },
+    {
+      "id": "TF-060",
+      "phase": "6",
+      "title": "Dikey oyun dilimi",
+      "depends_on": [
+        "TF-050"
+      ],
+      "acceptance": "Arazi/aile/inşa/kaynak/keşif bütünleşik; onaylı Master Tree, ses, UI ve paketleme.",
+      "status": "planned"
+    }
+  ]
+}
