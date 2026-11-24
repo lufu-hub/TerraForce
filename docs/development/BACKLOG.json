@@ -18,7 +18,8 @@
         "TF-000"
       ],
       "acceptance": "Onaylı çalışma alanında boş oyun derlendi, açıldı, geri dönüş noktası var.",
-      "status": "planned"
+      "status": "in_progress",
+      "note": "Kod/yapılandırma hazır; ilk derleme Windows'ta bekliyor."
     },
     {
       "id": "TF-002",
@@ -28,7 +29,8 @@
         "TF-001"
       ],
       "acceptance": "Tekrarlanabilir build, hedefli test, log özeti, küçük editor automation örneği.",
-      "status": "planned"
+      "status": "in_progress",
+      "note": "tf komutları, log özeti, checkpoint/rollback, Python harita örneği hazır; Windows'ta doğrulanmadı."
     },
     {
       "id": "TF-003",
@@ -38,7 +40,8 @@
         "TF-002"
       ],
       "acceptance": "10 dönüm civarı arazide pan/zoom/rotate çalışıyor.",
-      "status": "planned"
+      "status": "in_progress",
+      "note": "Sentetik arazi ve kamera kodu hazır; Windows'ta doğrulanmadı."
     },
     {
       "id": "TF-004",
@@ -48,7 +51,8 @@
         "TF-003"
       ],
       "acceptance": "Yapı yerleştiriliyor, Windows build editör dışında açılıyor.",
-      "status": "planned"
+      "status": "in_progress",
+      "note": "Tek yapı + duman testi + paketleme komutu hazır; Windows'ta doğrulanmadı."
     },
     {
       "id": "TF-005",

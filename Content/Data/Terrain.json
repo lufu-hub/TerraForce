@@ -1,0 +1,13 @@
+{
+  "_doc": "Sentetik M0 arazisi. 100 x 100 m = 10 donum. Birimler metre.",
+  "sizeXMeters": 100,
+  "sizeYMeters": 100,
+  "cellSizeMeters": 1,
+  "amplitudeMeters": 3,
+  "baseFrequency": 0.02,
+  "octaves": 4,
+  "seed": 1337,
+  "maxBuildHeightDeltaMeters": 1.5,
+  "groundColor": [0.20, 0.28, 0.12],
+  "flipWinding": false
+}
