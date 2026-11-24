@@ -1,0 +1,23 @@
+# Unreal uretilen klasorler
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+Build/
+Plugins/*/Binaries/
+Plugins/*/Intermediate/
+# IDE
+.vs/
+.vscode/
+.idea/
+*.sln
+*.suo
+*.VC.db
+*.opendb
+# Paketlenmis cikti ve yerel loglar
+Packaged/
+Logs/
+# Python / yerel
+__pycache__/
+*.pyc
+.env

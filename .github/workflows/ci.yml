@@ -1,0 +1,21 @@
+# Unreal gerektirmeyen hizli kontroller: simulasyon cekirdegi, veri ve otomasyon araclari.
+# Unreal derlemesi ve oyun testleri Windows PC'de `tf build/test/smoke/package` ile yapilir.
+name: ci
+on:
+  push:
+  pull_request:
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Simulasyon cekirdegi testleri
+        run: |
+          cmake -S Tests/SimTests -B build/simtests -DCMAKE_BUILD_TYPE=Release
+          cmake --build build/simtests
+          ./build/simtests/tf_sim_tests
+      - name: Veri dogrulama
+        run: python3 Scripts/validate_data.py
+      - name: Arac testleri
+        run: python3 -m unittest discover -s Tests/ToolTests -v
