@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "2.0",
   "status": "planning",
   "tasks": [
     {
@@ -33,11 +33,11 @@
     {
       "id": "TF-003",
       "phase": "1",
-      "title": "Sentetik arazi ve strateji kamerası",
+      "title": "Sentetik arazi ve izometrik 2.5D kamera PoC",
       "depends_on": [
         "TF-002"
       ],
-      "acceptance": "10 dönüm civarı arazide pan/zoom/rotate çalışıyor.",
+      "acceptance": "Basit 3D/2.5D kamera seçenekleri test edildi; pan/zoom ve okunabilirlik, performans ölçümü. Yaklaşık 10 dönüm aday.",
       "status": "planned"
     },
     {
@@ -62,23 +62,22 @@
     },
     {
       "id": "TF-006",
-      "phase": "1",
-      "title": "Keşif modu",
+      "phase": "8",
+      "title": "Yaya keşif modu (opsiyonel)",
       "depends_on": [
         "TF-003"
       ],
-      "acceptance": "Strateji ve yaya keşif arasında geçiş.",
-      "status": "planned"
+      "acceptance": "Yalnız yeniden ürün onayı ile; çekirdek oyun bağımlılığı değil.",
+      "status": "deferred"
     },
     {
       "id": "TF-007",
       "phase": "1",
       "title": "Zaman ve kayıt",
       "depends_on": [
-        "TF-005",
-        "TF-006"
+        "TF-005"
       ],
-      "acceptance": "Gün akışı, kayıt/yükleme konumu ve yapıları koruyor.",
+      "acceptance": "30 saniye gün hedefi, zaman kontrolü, sürümlü kayıt/yükleme konum ve yapıları korur.",
       "status": "planned"
     },
     {
@@ -88,17 +87,27 @@
       "depends_on": [
         "TF-007"
       ],
-      "acceptance": "Türkçe UI, düşük/orta grafik, regresyon ve Windows paketleme.",
+      "acceptance": "İngilizce UI, sade 2.5D, hedefli regresyon ve Windows paketleme.",
+      "status": "planned"
+    },
+    {
+      "id": "TF-010",
+      "phase": "2",
+      "title": "First Playable Life",
+      "depends_on": [
+        "TF-008"
+      ],
+      "acceptance": "Tek karakter, görev, temel ihtiyaç, odun, tarım, satış, zaman, kaynak/para ve kayıt oynanabilir.",
       "status": "planned"
     },
     {
       "id": "TF-020",
-      "phase": "2",
-      "title": "İnşa ve depolama",
+      "phase": "3",
+      "title": "Modüler inşa, upgrade ve depolama",
       "depends_on": [
-        "TF-008"
+        "TF-010"
       ],
-      "acceptance": "Maliyetli inşa, yol/çit, depolama ve gelişim çalışıyor.",
+      "acceptance": "Aynı yapı kimliği, genişleme alanı, maliyet, depo ve upgrade çalışır.",
       "status": "planned"
     },
     {
@@ -108,7 +117,7 @@
       "depends_on": [
         "TF-020"
       ],
-      "acceptance": "Su/gıda/enerji, ekim/hasat, mevsim, kıtlık ölçülebilir.",
+      "acceptance": "Kuyu/su, gıda/enerji, ekim/hasat, sera/hayvan, mevsim, crafting/skill ve kıtlık ölçülebilir.",
       "status": "planned"
     },
     {
@@ -118,17 +127,37 @@
       "depends_on": [
         "TF-030"
       ],
-      "acceptance": "Senaryolar, yaş, ihtiyaç, görev, olaylar ve kayıt doğrulanır.",
+      "acceptance": "Aile, yaş, hamilelik toggle/sınırlar, ilişki, olaylar ve kayıt doğrulanır; D12 açık.",
+      "status": "planned"
+    },
+    {
+      "id": "TF-045",
+      "phase": "4",
+      "title": "Ekonomik çeşitlilik ve denge laboratuvarı",
+      "depends_on": [
+        "TF-040"
+      ],
+      "acceptance": "Crafting, Nursery, Creative, Contract, IT, turizm işletmeci, dış servis; talep ve pratik/şans; D21 katsayıları kullanıcıyla onaylanır.",
       "status": "planned"
     },
     {
       "id": "TF-050",
       "phase": "5",
-      "title": "Gerçek arazi hattı",
+      "title": "World Atlas, hazır gerçek bölge ve Realtor",
       "depends_on": [
-        "TF-040"
+        "TF-045"
       ],
-      "acceptance": "DEM import, güneş/iklim, PCG, veri kalite etiketi ve performans.",
+      "acceptance": "Gerçek şehir çevresi DEM/iklim, ülke whitelist, property katalog/İngilizce emlakçı, veri kalite etiketi ve performans; tüm dünya runtime yok.",
+      "status": "planned"
+    },
+    {
+      "id": "TF-055",
+      "phase": "6",
+      "title": "Survival ve dayanıklılık",
+      "depends_on": [
+        "TF-050"
+      ],
+      "acceptance": "Risk/olay, zorluk/coğrafya, hazırlık/toparlanma, ülke whitelist; erken ölüm kuralı onaylanır.",
       "status": "planned"
     },
     {
@@ -136,10 +165,31 @@
       "phase": "6",
       "title": "Dikey oyun dilimi",
       "depends_on": [
-        "TF-050"
+        "TF-055"
       ],
-      "acceptance": "Arazi/aile/inşa/kaynak/keşif bütünleşik; onaylı Master Tree, ses, UI ve paketleme.",
+      "acceptance": "Arazi/aile/inşa/kaynak/ekonomi/risk entegre; İngilizce UI, kayıt, Windows build ve playtest. İleri grafik/yaya keşfi/Master Tree revizyonu zorunlu değil.",
+      "status": "planned"
+    },
+    {
+      "id": "TF-070",
+      "phase": "7",
+      "title": "Co-op",
+      "depends_on": [
+        "TF-060"
+      ],
+      "acceptance": "Dört aile hedefi, ownership/time/retirement kararları onaylı; sync iki sonra dört istemcide test.",
+      "status": "planned"
+    },
+    {
+      "id": "TF-080",
+      "phase": "8",
+      "title": "Görsel evrim ve yayın",
+      "depends_on": [
+        "TF-070"
+      ],
+      "acceptance": "İçerik, UI, performans, QA, görsel/ses/animasyon entegrasyonu; ayrı release kararı. Paralel asset çalışmaları daha erken başlayabilir.",
       "status": "planned"
     }
-  ]
+  ],
+  "note": "Design update only; no implementation status inferred. Deferred TF-006 is not a dependency. IDs preserved."
 }
