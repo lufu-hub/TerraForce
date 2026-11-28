@@ -32,7 +32,7 @@ Kayıt: kullanıcı onayı 24.11.2026 (TF-000 raporu §5–§7). Serene dalında
 - D25 (eski D15): simülasyon çekirdeği saf C++ (`Source/TerraForge/Public/Sim`), Unreal tipi kullanmaz, Unreal'siz test edilir.
 - D26 (eski D16): yapı kataloğu, arazi ayarları ve metinler `Content/Data/*.json` içinde; kodda liste yok. Güncelleme (28.11): varsayılan metin dili İngilizce (D14, `en.json`); `tr.json` yerelleştirme olarak kalır, anahtar kümesi doğrulayıcıyla eşit tutulur.
 - D27 (eski D17, M0 geçici, geri alınabilir): arazi ProceduralMesh (Landscape: TF-050); girdi doğrudan tuş okuma (Enhanced Input: TF-008); HUD Canvas metni (UMG: TF-008); harita boş, sahne C++ ile çalışma anında kurulur.
-- D05 notu: hedef UE sürümü 5.7 (`TerraForge.uproject`); yerelde doğrulanıp sabitlenir, farklıysa burada güncellenir.
+- Not (D05 ile ilgili, ayrı karar numarası değil): hedef UE sürümü 5.7 (`TerraForge.uproject`); yerelde doğrulanıp sabitlenir, farklıysa burada güncellenir.
 ## APPROVED — belge düzeni (kurucu, 28.11.2026)
 - D28: Karar numaraları ve onaylı kararlar için tek kaynak bu depodaki `DECISIONS.md`. Claude proje belgeleri (vizyon, bu-hafta, çalışma düzeni, uzlaştırma raporu) sohbet/araştırma notudur; çelişirse bu dosya geçerlidir. Yeni karar bu dosyaya, bir sonraki boş numarayla yazılır (sıradaki: D30).
 ## PROPOSED
