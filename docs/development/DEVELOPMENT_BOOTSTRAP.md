@@ -1,7 +1,5 @@
-# Claude Code başlangıç talimatı
-Teknik lider, Unreal geliştiricisi ve otomasyon mimarı olarak çalış. Kullanıcı kodlama bilmiyor. Önce README, CLAUDE, GAME_VISION, DECISIONS, CURRENT_STATE ve BACKLOG'u oku. Rutin teknik işlerde bağımsız ilerle; harcama, silme, kapsam/mimari kırılması veya belirsiz ürün kararında dur. Pro aboneliği, ücretli API yok. Windows RTX 4060; diğer donanımı doğrula.
-0A: mevcut yerel repo ve araçları incele, bağımlılık, CPU/RAM/disk/GPU, motor sürümü ve entegrasyon yöntemini raporla. Mevcut web prototipini koru, yerel/remote geçmişini incele. Motor ve geçiş onaylanmadan yıkıcı işlem yok.
-0B: onaylı güvenli çalışma alanında UE C++ iskeleti, Git/LFS ve proje yapısı; ilk build. Mevcut dokümanları yeniden üretme, eksikleri tamamla.
-0C: build/test komutları, log özeti, checkpoint/rollback; Python editör otomasyonu küçük örnek. MCP isteğe bağlı ayrı doğrulama.
-1: sentetik arazi, strateji kamerası, tek yapı, Windows build; ardından 3–4 yapı, keşif, çakışma/eğim, zaman, Save/Load, Türkçe UI. Geniş aile, ekonomi, gerçek arazi ve Master Tree uygulamasına geçme.
-Her görevde minimum ilgili okuma, risk bazlı test, kendi hatasını düzeltme, kanıt ve Git checkpoint. Oturum sınırında güvenli devam notu. Önce çalışan oyun, sonra görsel kalite. Kapsam ve kabul kriterleri BACKLOG.json/ROADMAP.md. İlk iş TF-000.
+# Claude Code başlangıç talimatı v2.0
+Önce CURRENT_STATE, DECISIONS, CLAUDE ve ilgili BACKLOG görevi; GAME_VISION ilgili bölüm. UE5 onaylı, 2.5D Gameplay First, İngilizce. Kullanıcı ve arkadaşı oynayıp ürün/denge kararlarını verir. Pro, ücretli API yok.
+0A TF-000: yerel repo/remote/HEAD, mevcut TF-000 raporu ve kurulum kanıtını incele; CPU/RAM/disk/GPU, UE/VS/Git LFS, mevcut prototip. Var olan raporu tekrar üretme. Yerel değişiklikleri koru; güvenli çalışma alanı olmadan işlem yok.
+0B TF-001: onaylı güvenli alanda UE5 iskeleti, C++/Blueprint önerisini mevcut duruma göre doğrula; ilk build. 0C TF-002: tekrarlanabilir build/test, log özeti, checkpoint; Python editor örneği, MCP opsiyonel.
+1: sentetik arazi, izometrik 2.5D kamera PoC, tek yapı, Windows build; sonra 3–4 yapı, eğim/çakışma, zaman, Save/Load ve İngilizce UI. Yaya keşfi deferred, ileri grafik şart değil. 2: mini yaşam döngüsü, görev/ihtiyaç/odun/tarım/satış. Sonrası ROADMAP/BACKLOG. Placeholder asset ile oyna; animasyon/ses paralel, simülasyondan bağımsız. Onaylanmamış economy katsayılarını veya açık Master Tree düğümlerini sabitleme. Bu güncelleme kod uygulamasını otomatik başlatmaz.

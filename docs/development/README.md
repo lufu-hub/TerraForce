@@ -1,5 +1,4 @@
-# TerraForge — Development Master Plan v1.0
-
-Bu klasör, 24 Kasım 2026 tarihli teknoloji ve üretim planının çalışma paketidir. Oyun kodu değildir. Mevcut Master Tree değiştirilmeyecektir.
-
-Başlangıç sırası: GAME_VISION.md → DECISIONS.md → TECHNOLOGY_STACK.md → DEVELOPMENT_BOOTSTRAP.md → CURRENT_STATE.md → BACKLOG.json. Diğer dosyaları yalnızca ilgili görevde oku. CLAUDE.md çalışma kurallarını içerir. Yerel mevcut prototipi incelemeden dosyaları silme veya taşıma.
+# TerraForge — Development Master Plan v2.0
+28 Kasım 2026 — Gameplay First tasarım/üretim paketi, oyun kodu değil.
+UE5 baştan sona; sade 2.5D, İngilizce oyun, erken oynanabilirlik ve içerik. Gerçek şehir çevresi hazırlanmış bölge ve Realtor. İleri grafik/serbest yaya keşfi erken şart değil.
+Önce CURRENT_STATE.md → DECISIONS.md → CLAUDE.md → BACKLOG.json ilgili iş. Ürün: GAME_VISION.md; teknik öneri: ARCHITECTURE.md, TECHNOLOGY_STACK.md; sıra: ROADMAP.md; başlangıç: DEVELOPMENT_BOOTSTRAP.md, TOOL_SETUP.md; risk: RISKS.md. Onaylı karar öneriden üstündür. Master Tree kullanıcı revizyonundan önce değiştirilmeyecek. Yerel prototip ve uncommitted iş korunur.

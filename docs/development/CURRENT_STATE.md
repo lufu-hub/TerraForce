@@ -1,4 +1,4 @@
-# Güncel durum
-Durum: plan paketi, henüz Unreal kurulum/derleme/test kanıtı yok. Yerel Windows repo dosyaları görülmedi. Ekran görüntüsünde GitHub Desktop'ta yerel web projesine ait olabilecek uncommitted değişiklikler bulunuyor. Bunları silme, taşıma veya üzerine yazma. GitHub uzak repo başlangıçta boştu; dokümantasyon ilk içerik olarak ekleniyor.
-Sonraki iş: TF-000 ortam ve mevcut repo incelemesi. Önce yerel Git durumu ve remote geçmişi karşılaştır, gerekiyorsa güvenli yedek ve ayrı çalışma alanı öner. Master Tree'ye dokunma. Donanım, disk, Unreal/C++ kurulumları ve Claude yetkileri doğrulanacak.
-Tamamlanan oyun özelliği: doğrulanmadı. Kabul testi: çalıştırılmadı. Her paket sonunda bu dosyaya tarih, commit, sonuç, risk, sonraki görev ve gerekli kullanıcı kararı ekle.
+# Güncel durum — 28.11.2026
+GitHub dokümantasyon revizyonu v2.0: UE5/2.5D Gameplay First, İngilizce, hazırlanmış gerçek bölgeler ve Realtor, geniş ekonomi/aile/hospitality kuralları. Bu bir tasarım güncellemesidir; oyun kodu uygulanmış sayılmaz.
+Yerel Windows repo ve kurulum durumu doğrudan görülmedi. Önceki görüşmede TF-000 raporu paylaşılmış ve Unreal/Visual Studio kurulumu başlatılmış; tamamlandığı veya ilk build kanıtı bu uzak repoda yok. Eski gözlemlerde yerel uncommitted değişiklikler olabileceği kaydedilmişti; silme/taşıma/üzerine yazma yok.
+Sonraki iş: TF-000 kanıtını yerelden bul, git status/remote/HEAD ve kurulum doğrula; mevcut raporu yeniden üretme, yalnız eksik kontroller. Kirli veya ayrışmış geçmişte güvenli birleştirme için dur. Ardından önceki onay ve teknik önkoşullar çerçevesinde TF-001 değerlendir. Master Tree'ye dokunma. Tamamlanan oyun özelliği: doğrulanmadı. Build/test: doğrulanmadı. Her pakette tarih, commit, sonuç, risk, sonraki görev, gerekli karar ekle.

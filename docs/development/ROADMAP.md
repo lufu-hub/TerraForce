@@ -1,11 +1,14 @@
-# Yol haritası (tahmin)
-| Faz | Zaman | Kapsam | Kabul |
-|---|---|---|---|
-|0|Hafta 1–2|Araçlar, Git, C++ iskeleti, otomasyon|Derlenir, açılır, geri alınabilir|
-|1|Hafta 3–6|10 dönüm, kamera/keşif, 3–4 yapı, zaman, Save/Load, Türkçe UI|Windows oynanabilir prototip|
-|2|Ay 2–3|Modüler inşa, yollar, çitler, maliyet, depolama, eğim|Yerleşim kararları sonuç üretir|
-|3|Ay 4–5|Su, gıda, enerji, ekim/hasat, mevsim, kıtlık|Üretim ve ihtiyaç dengesi ölçülebilir|
-|4|Ay 6–7|Aile senaryoları, yaşlanma, görev, hamilelik, animasyon|Aile durumu değişir ve kaydedilir|
-|5|Ay 8–9|QGIS/DEM, güneş, iklim, PCG, optimizasyon|Desteklenen gerçek arazi içe alınır|
-|6|Ay 10–12|Entegre dikey dilim, Master Tree, ses, UI, performans|Arazi seçimi → aile → inşa → kaynak → keşif oynanabilir|
-Haftalık: W1 kurulum/build; W2 sözleşmeler ve otomasyon; W3 arazi/kamera; W4 yerleşim; W5 keşif/kayıt/zaman; W6 entegrasyon/paketleme. Milestone 0 bir yapı ve kamerayla erken teknik doğrulama; hafta 1 hedefi, garanti değil. Sonraki kapsam havancılık, afet, derin karakter etkileşimleri ve animasyonlar. Haftada 10–15 saat varsayımı; ay aralıkları yaklaşık ve kabul kapısına bağlı.
+# Gameplay First Roadmap v2.0 — kabul kapıları
+Eski 12 ay/hafta tahminleri bağlayıcı değil; fazlar bağımlılık ve oynanabilir kabul ile ilerler. Mevcut TF kimlikleri BACKLOG.json içinde korunur.
+| Faz | Teslimat | Kabul |
+|---|---|---|
+|0 Technical Playground|TF-000 ortam/repo; TF-001 UE5/Git LFS; TF-002 build/test|Boş UE build, geri dönüş noktası, yerel geçmiş doğrulandı|
+|1 Technical Prototype|TF-003 sentetik arazi ve 2.5D kamera; TF-004 tek yapı/Windows build; TF-005 yapı katalog; TF-007 zaman/kayıt; TF-008 İngilizce prototip|Yaya keşfi zorunlu değil; basit 3D model/kamera PoC, paket açılır|
+|2 First Playable Life|TF-010 görev, ihtiyaç, odun, tarım, satış ve zaman|Tek karakterle oyna, kaynak/para akışı ve kayıt tutarlı|
+|3 Homestead Expansion|TF-020 inşa/depo/upgrade; TF-030 su/enerji/çevre, sera, hayvancılık, crafting, skill|Aynı yapı gelişir; kaynak ve zaman muhasebesi, temel altyapı işler|
+|4 Life Simulation & Economy|TF-040 aile/yaş/hamilelik/ilişki; TF-045 ekonomi çeşitleri, otel, hizmetler ve denge|Aile olayları ve talep sınırı; zarar/kâr, pratik ve şans; kullanıcı onaylı denge|
+|5 World Atlas|TF-050 hazırlanmış gerçek kırsal bölgeler, ülke/bölge profili, Realtor, Property Catalog|İngilizce katalog, veri kalitesi, farklı koşullar ve yükleme doğrulanır|
+|6 Survival & integrated slice|TF-055 risk/preset; TF-060 entegre yaşam dilimi|Ülke whitelist, bölgesel risk, toparlanma; uçtan uca oynanabilir build|
+|7 Co-op|TF-070 dört aile, mülk, zaman, sync|İki sonra dört istemci; retirement/ortak mülk kararları onaylı|
+|8 Visual Evolution & Release|TF-080 içerik ölçekleme, performans, QA, localization, grafik/ses/animasyon cilası|Görsel değişiklik çekirdeği bozmaz; release şartları ayrı onay|
+Animasyon, ses, sade asset ve playtest faz 1'den itibaren paralel; ileri grafik bir önkoşul değil. TF-006 eski yaya keşfi görevi deferred. Geliştirme Master Tree revizyonu kullanıcı kontrolünde; uygulama kapısı olarak otomatik sabitleme yok. Açık ekonomik/teknik/ticari kararlar uygulanmadan onaylanır.
