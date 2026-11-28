@@ -8,7 +8,8 @@
       "title": "Ortam ve repo incelemesi",
       "depends_on": [],
       "acceptance": "Araç/donanım, yerel ve remote Git durumu, mevcut prototip, engeller ve onay gerektiren kararlar raporlandı.",
-      "status": "planned"
+      "status": "in_progress",
+      "note": "Kısmi: uzak repo, bulut ortamı ve iki yerel klonun yapısı incelendi (28.11, salt okunur). Yerel git status, donanım ve UE/VS kurulumu doğrulanmadı. Bkz. reports/TF-000.md."
     },
     {
       "id": "TF-001",
@@ -18,7 +19,8 @@
         "TF-000"
       ],
       "acceptance": "Onaylı çalışma alanında boş oyun derlendi, açıldı, geri dönüş noktası var.",
-      "status": "planned"
+      "status": "in_progress",
+      "note": "Kod/yapılandırma hazır (UE 5.7 hedefi, Git LFS); ilk derleme Windows'ta bekliyor. Doğrulanmadı."
     },
     {
       "id": "TF-002",
@@ -28,7 +30,8 @@
         "TF-001"
       ],
       "acceptance": "Tekrarlanabilir build, hedefli test, log özeti, küçük editor automation örneği.",
-      "status": "planned"
+      "status": "in_progress",
+      "note": "tf komutları, log özeti, checkpoint/rollback, Python harita örneği hazır; Unreal'siz testler bulutta geçti (28.11). Windows'ta doğrulanmadı."
     },
     {
       "id": "TF-003",
@@ -38,7 +41,8 @@
         "TF-002"
       ],
       "acceptance": "Basit 3D/2.5D kamera seçenekleri test edildi; pan/zoom ve okunabilirlik, performans ölçümü. Yaklaşık 10 dönüm aday.",
-      "status": "planned"
+      "status": "in_progress",
+      "note": "Sentetik 10 dönüm arazi ve strateji kamerası kodu hazır; ortografik/perspektif karşılaştırması ve performans ölçümü yapılmadı. Windows'ta doğrulanmadı."
     },
     {
       "id": "TF-004",
@@ -48,7 +52,8 @@
         "TF-003"
       ],
       "acceptance": "Yapı yerleştiriliyor, Windows build editör dışında açılıyor.",
-      "status": "planned"
+      "status": "in_progress",
+      "note": "Tek yapı yerleştirme + duman testi + paketleme komutu hazır; Windows'ta doğrulanmadı."
     },
     {
       "id": "TF-005",
@@ -88,7 +93,8 @@
         "TF-007"
       ],
       "acceptance": "İngilizce UI, sade 2.5D, hedefli regresyon ve Windows paketleme.",
-      "status": "planned"
+      "status": "planned",
+      "note": "M0 HUD metinleri İngilizce (en.json) hazır; UMG ve Enhanced Input varlıkları bu görevde."
     },
     {
       "id": "TF-010",
@@ -191,5 +197,5 @@
       "status": "planned"
     }
   ],
-  "note": "Design update only; no implementation status inferred. Deferred TF-006 is not a dependency. IDs preserved."
+  "note": "Design update v2.0 + serene kodunun entegrasyonu (28.11.2026). Hiçbir görev completed değil; in_progress = kod hazır, kanıt (build/test) bekliyor. Deferred TF-006 bağımlılık değil. Kimlikler korunur."
 }

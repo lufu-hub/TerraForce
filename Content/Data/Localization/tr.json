@@ -1,0 +1,18 @@
+{
+  "culture": "tr",
+  "strings": {
+    "hud.title": "TerraForge — Milestone 0",
+    "hud.help.camera": "Kamera: WASD / ok tuşları / ekran kenarı = kaydır · Q/E veya orta tuş = döndür · tekerlek / PgUp-PgDn = yakınlaştır",
+    "hud.help.build": "B = inşa modu · 1-9 = yapı seç · Sol tık = yerleştir · R = döndür · Sağ tık / Esc = iptal · F10 = çıkış",
+    "hud.buildings_count": "Yapılar: {0}",
+    "hud.mode.build": "İnşa modu: {0}",
+    "building.house_small": "Küçük Ev",
+    "placement.ok": "Yerleştirilebilir",
+    "placement.placed": "Yapı yerleştirildi",
+    "placement.out_of_bounds": "Arazi sınırları dışında",
+    "placement.overlap": "Başka bir yapıyla çakışıyor",
+    "placement.too_steep": "Zemin çok eğimli",
+    "placement.invalid_size": "Geçersiz yapı boyutu",
+    "placement.not_ready": "Arazi hazır değil"
+  }
+}
