@@ -1,0 +1,18 @@
+{
+  "culture": "en",
+  "strings": {
+    "hud.title": "TerraForge — Milestone 0",
+    "hud.help.camera": "Camera: WASD / arrow keys / screen edge = pan · Q/E or middle mouse = rotate · wheel / PgUp-PgDn = zoom",
+    "hud.help.build": "B = build mode · 1-9 = select building · Left click = place · R = rotate · Right click / Esc = cancel · F10 = quit",
+    "hud.buildings_count": "Buildings: {0}",
+    "hud.mode.build": "Build mode: {0}",
+    "building.house_small": "Small House",
+    "placement.ok": "Can be placed",
+    "placement.placed": "Building placed",
+    "placement.out_of_bounds": "Outside the terrain bounds",
+    "placement.overlap": "Overlaps another building",
+    "placement.too_steep": "Ground is too steep",
+    "placement.invalid_size": "Invalid building size",
+    "placement.not_ready": "Terrain is not ready"
+  }
+}

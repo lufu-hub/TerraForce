@@ -85,6 +85,20 @@ class ValidateDataTests(unittest.TestCase):
             self.assertIn("footprintX", joined)
             self.assertIn("eksik.anahtar", joined)
 
+    def test_detects_localization_key_mismatch(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            shutil.copytree(os.path.join(ROOT, "Content", "Data"), os.path.join(tmp, "Content", "Data"))
+            path = os.path.join(tmp, "Content", "Data", "Localization", "tr.json")
+            with open(path, encoding="utf-8") as handle:
+                data = json.load(handle)
+            data["strings"].pop("placement.ok")
+            data["strings"]["fazladan.anahtar"] = "x"
+            with open(path, "w", encoding="utf-8") as handle:
+                json.dump(data, handle)
+            joined = "\n".join(validate_data.validate(tmp))
+            self.assertIn("placement.ok", joined)
+            self.assertIn("fazladan.anahtar", joined)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -30,16 +30,26 @@ def validate(root):
     errors = []
     data_dir = os.path.join(root, "Content", "Data")
 
+    # Varsayilan dil: Ingilizce (D14). Diger diller (ornegin tr) varsa ayni anahtar kumesine sahip olmali.
     strings = {}
-    tr = load(os.path.join(data_dir, "Localization", "tr.json"), errors)
-    if tr is not None:
-        strings = tr.get("strings") or {}
+    loc_dir = os.path.join(data_dir, "Localization")
+    en = load(os.path.join(loc_dir, "en.json"), errors)
+    if en is not None:
+        strings = en.get("strings") or {}
         if not isinstance(strings, dict) or not strings:
-            errors.append("tr.json: 'strings' nesnesi bos veya yok")
+            errors.append("en.json: 'strings' nesnesi bos veya yok")
             strings = {}
         for key, value in strings.items():
             if not isinstance(value, str) or not value.strip():
-                errors.append("tr.json: '%s' bos metin" % key)
+                errors.append("en.json: '%s' bos metin" % key)
+    other = os.path.join(loc_dir, "tr.json")
+    if os.path.exists(other) and strings:
+        tr = load(other, errors)
+        tr_strings = (tr or {}).get("strings") or {}
+        for key in sorted(set(strings) - set(tr_strings)):
+            errors.append("tr.json: '%s' anahtari en.json'da var, burada eksik" % key)
+        for key in sorted(set(tr_strings) - set(strings)):
+            errors.append("tr.json: '%s' anahtari en.json'da yok (varsayilan dil esas)" % key)
 
     terrain = load(os.path.join(data_dir, "Terrain.json"), errors)
     if terrain is not None:
@@ -77,7 +87,7 @@ def validate(root):
                 errors.append("%s: 'heightMeters' pozitif olmali" % label)
             key = entry.get("nameKey")
             if strings and key not in strings:
-                errors.append("%s: nameKey '%s' tr.json icinde yok" % (label, key))
+                errors.append("%s: nameKey '%s' en.json icinde yok" % (label, key))
             if "color" in entry:
                 check_color(label + " color", entry["color"], errors)
 
@@ -89,7 +99,7 @@ def validate(root):
     ]
     for key in required:
         if strings and key not in strings:
-            errors.append("tr.json: kodun kullandigi '%s' anahtari eksik" % key)
+            errors.append("en.json: kodun kullandigi '%s' anahtari eksik" % key)
     return errors
 
 

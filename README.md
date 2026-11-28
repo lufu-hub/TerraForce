@@ -1,12 +1,12 @@
 # TerraForge
 
-Gerçekçi 3D aile yaşam/strateji simülasyonu (Unreal Engine 5, Windows). Plan ve kurallar: `docs/development/`.
+Sade 2.5D aile yaşam/strateji simülasyonu, oyun dili İngilizce (Unreal Engine 5, Windows). Plan ve kurallar: `docs/development/` (önce `DECISIONS.md`).
 
 ## İlk kurulum (Windows, bir kez)
 1. **Epic Games Launcher** → Unreal Engine **5.7** kurun (`TerraForge.uproject` içindeki sürüm).
 2. **Visual Studio 2022 Community** → "C++ ile oyun geliştirme" ve "C++ ile masaüstü geliştirme" iş yükleri.
 3. **Git for Windows** (Git LFS dahil).
-4. Bu repoyu **yeni ve ayrı bir klasöre** klonlayın (eski web prototipi klasörüne değil).
+4. Bu repoyu **yeni ve ayrı bir klasöre** klonlayın (eski web prototipi klasörüne değil). Aynı uzak depoyu kullanan iki klon varsa yalnızca UE klonundan commit/push yapın (D24).
 
 ## Günlük komutlar (repo klasöründe komut istemi)
 ```

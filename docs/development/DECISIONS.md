@@ -25,3 +25,15 @@ Durumlar: APPROVED ürün kararı; PROPOSED teknik öneri; OPEN belirsiz; SUPERS
 - D21: ekonomik denge laboratuvarı kullanıcı ve arkadaşıyla; kesin fiyat, süre dışındaki üretim/tüketim katsayıları, şans, talep ve ROI açık. Hospitality 5 seviye/çadır veya bungalov ilk seviye aday, kesin değil.
 - D22: co-op zaman kontrolü, ortak mülk/retirement detayları, 60 öncesi ölüm sonucu açık.
 Kaynak: Terraforge tasarım görüşmeleri, en son 28.11.2026 Gameplay First güncellemesi. Oyun tasarımının ayrıntıları GAME_VISION.md; teknik sözleşmeler ARCHITECTURE.md; uygulama sırası ROADMAP.md/BACKLOG.json.
+## APPROVED — operasyonel kararlar (serene dalından taşındı, 28.11.2026)
+Kayıt: kullanıcı onayı 24.11.2026 (TF-000 raporu §5–§7). Serene dalında bunlar D13–D17 olarak numaralanmıştı; v2 ürün kararlarıyla çakıştığı için **yeniden numaralandı** (eski D13–D17 atıfları artık D23–D27).
+- D23 (eski D13): Unreal derleme/test Windows'ta yerel Claude Code ile; bulut oturumu yalnızca motordan bağımsız işler.
+- D24 (eski D14): Unreal çalışması ayrı yeni klonda; eski yerel klasör (web prototipi, Master Tree) dokunulmadan kalır. Uzantı (28.11, kurucu): iki klon aynı uzak depoyu paylaşıyor; eski klon bu depoya commit/push/pull yapmaz ve web prototipi bu depoya girmez (kök dosya adları — CLAUDE.md, README.md, .gitignore — çakışır; depo public).
+- D25 (eski D15): simülasyon çekirdeği saf C++ (`Source/TerraForge/Public/Sim`), Unreal tipi kullanmaz, Unreal'siz test edilir.
+- D26 (eski D16): yapı kataloğu, arazi ayarları ve metinler `Content/Data/*.json` içinde; kodda liste yok. Güncelleme (28.11): varsayılan metin dili İngilizce (D14, `en.json`); `tr.json` yerelleştirme olarak kalır, anahtar kümesi doğrulayıcıyla eşit tutulur.
+- D27 (eski D17, M0 geçici, geri alınabilir): arazi ProceduralMesh (Landscape: TF-050); girdi doğrudan tuş okuma (Enhanced Input: TF-008); HUD Canvas metni (UMG: TF-008); harita boş, sahne C++ ile çalışma anında kurulur.
+- D05 notu: hedef UE sürümü 5.7 (`TerraForge.uproject`); yerelde doğrulanıp sabitlenir, farklıysa burada güncellenir.
+## APPROVED — belge düzeni (kurucu, 28.11.2026)
+- D28: Karar numaraları ve onaylı kararlar için tek kaynak bu depodaki `DECISIONS.md`. Claude proje belgeleri (vizyon, bu-hafta, çalışma düzeni, uzlaştırma raporu) sohbet/araştırma notudur; çelişirse bu dosya geçerlidir. Yeni karar bu dosyaya, bir sonraki boş numarayla yazılır (sıradaki: D30).
+## PROPOSED
+- D29: Claude projesinde 22–23.11'de başlatılan React/Vite web prototipi (eski klonda) UE5 yolunu (D05/D13) değiştirmez; yeni özellik eklenmez, korunur. İçerik/katalog araştırması UE Data Asset/JSON kataloğuna akar. Web prototipinin akıbeti (arşiv, ayrı depo) kurucu onayı bekler.

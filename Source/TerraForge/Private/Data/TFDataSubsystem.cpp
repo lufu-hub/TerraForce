@@ -70,7 +70,7 @@ bool UTFDataSubsystem::ReloadAll()
 {
 	const bool bTerrain = LoadTerrain();
 	const bool bBuildings = LoadBuildings();
-	const bool bStrings = LoadStrings(TEXT("tr"));
+	const bool bStrings = LoadStrings(TEXT("en"));
 	UE_LOG(LogTerraForge, Log, TEXT("Veri yuklendi: arazi=%d yapilar=%d (%d tur) metinler=%d (%d anahtar)"),
 		bTerrain, bBuildings, BuildingDefs.Num(), bStrings, Strings.Num());
 	return bTerrain && bBuildings && bStrings;

@@ -5,7 +5,7 @@
 #include "TFHUD.generated.h"
 
 /**
- * M0 icin basit metin arayuzu. Tum metinler Content/Data/Localization/tr.json'dan gelir.
+ * M0 icin basit metin arayuzu. Tum metinler Content/Data/Localization/<dil>.json'dan gelir (varsayilan: en, D14).
  * Prototype 0.1'de UMG arayuzune gecilecek.
  */
 UCLASS()
