@@ -114,8 +114,14 @@ if (Test-Path $vswhere) {
         }
     } catch { Add "- vswhere okunamadi" }
 } else { Add "- Visual Studio: KURULU DEGIL (vswhere yok)" }
-$sdk = Get-ChildItem "${env:ProgramFiles(x86)}\Windows Kits\10\Include" -Directory -ErrorAction SilentlyContinue | ForEach-Object Name
-Add "- Windows SDK: $(if ($sdk) { $sdk -join ', ' } else { 'bulunamadi' })"
+# Windows SDK: once kayit defterindeki kurulum koku, yoksa varsayilan klasor.
+$kitsRoot = $null
+foreach ($k in @("HKLM:\SOFTWARE\Microsoft\Windows Kits\Installed Roots", "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows Kits\Installed Roots")) {
+    try { $v = (Get-ItemProperty $k -ErrorAction Stop).KitsRoot10; if ($v) { $kitsRoot = $v; break } } catch {}
+}
+if (-not $kitsRoot) { $kitsRoot = "${env:ProgramFiles(x86)}\Windows Kits\10\" }
+$sdk = Get-ChildItem (Join-Path $kitsRoot "Include") -Directory -ErrorAction SilentlyContinue | Where-Object { $_.Name -match '^10\.' } | ForEach-Object Name
+Add "- Windows SDK: $(if ($sdk) { ($sdk -join ', ') + ' (' + $kitsRoot + ')' } else { 'bulunamadi - Visual Studio Installer > Degistir > Windows 11 SDK' })"
 
 # ---------------------------------------------------------------- Repo
 Section "Yerel TerraForge repo (salt okunur)"
@@ -138,17 +144,27 @@ foreach ($repo in $candidates) {
     Add ""
     if (-not (Test-Path (Join-Path $repo ".git"))) { Add "- Git deposu degil"; continue }
     # --no-optional-locks: git status bile index dosyasina yazmasin.
-    function G([string[]]$GArgs) { return ((& git --no-optional-locks -C $repo @GArgs 2>&1) | Out-String).Trim() }
-    Add "- Aktif dal: $(G @('rev-parse','--abbrev-ref','HEAD'))"
-    Add "- HEAD: $(G @('log','-1','--format=%h %ad %s','--date=short'))"
+    # Hata metni rapora dokulmesin: basarisiz komut kisa bir not dondurur.
+    function G([string[]]$GArgs) {
+        $out = & git --no-optional-locks -C $repo @GArgs 2>$null
+        if ($LASTEXITCODE -ne 0) { return "(okunamadi)" }
+        return (($out | Out-String).Trim())
+    }
+    $null = & git --no-optional-locks -C $repo rev-parse --verify --quiet HEAD 2>$null
+    $hasCommit = ($LASTEXITCODE -eq 0)
+    Add "- Aktif dal: $(G @('symbolic-ref','--short','HEAD'))"
+    if (-not $hasCommit) { Add "- HEAD: henuz hic commit yok (yalniz yerel dosyalar)" }
+    else { Add "- HEAD: $(G @('log','-1','--format=%h %ad %s','--date=short'))" }
+    $fetchHead = Join-Path $repo ".git\FETCH_HEAD"
+    Add "- Son fetch: $(if (Test-Path $fetchHead) { (Get-Item $fetchHead).LastWriteTime.ToString('yyyy-MM-dd HH:mm') } else { 'hic yapilmamis' })"
     Add "- Uzak depolar:"; Add '```'; Add (G @('remote','-v')); Add '```'
     Add "- Yerel dallar:"; Add '```'; Add (G @('branch','-vv')); Add '```'
     $originMain = G @('rev-parse','--verify','--quiet','refs/remotes/origin/main')
-    if ($originMain -and $originMain -notmatch "fatal") {
+    if ($hasCommit -and $originMain -and $originMain -ne "(okunamadi)") {
         Add "- HEAD ile (son bilinen) origin/main farki [yerel-ileri  uzak-ileri]: $(G @('rev-list','--left-right','--count','HEAD...origin/main'))"
         Add "- Ortak ata: $(G @('merge-base','HEAD','origin/main'))"
     } else { Add "- origin/main yerelde bilinmiyor (fetch yapilmadi; bilerek)" }
-    Add "- Son 10 commit:"; Add '```'; Add (G @('log','-10','--format=%h %ad %an %s','--date=short')); Add '```'
+    if ($hasCommit) { Add "- Son 10 commit:"; Add '```'; Add (G @('log','-10','--format=%h %ad %an %s','--date=short')); Add '```' }
     $porc = (& git --no-optional-locks -C $repo status --porcelain=v1 --untracked-files=all 2>&1)
     $porc = @($porc | Where-Object { $_ })
     Add "- Commit edilmemis degisiklik sayisi: $($porc.Count)"
