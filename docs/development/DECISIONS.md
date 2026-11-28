@@ -35,5 +35,4 @@ Kayıt: kullanıcı onayı 24.11.2026 (TF-000 raporu §5–§7). Serene dalında
 - Not (D05 ile ilgili, ayrı karar numarası değil): hedef UE sürümü 5.7 (`TerraForge.uproject`); yerelde doğrulanıp sabitlenir, farklıysa burada güncellenir.
 ## APPROVED — belge düzeni (kurucu, 28.11.2026)
 - D28: Karar numaraları ve onaylı kararlar için tek kaynak bu depodaki `DECISIONS.md`. Claude proje belgeleri (vizyon, bu-hafta, çalışma düzeni, uzlaştırma raporu) sohbet/araştırma notudur; çelişirse bu dosya geçerlidir. Yeni karar bu dosyaya, bir sonraki boş numarayla yazılır (sıradaki: D30).
-## PROPOSED
-- D29: Claude projesinde 22–23.11'de başlatılan React/Vite web prototipi (eski klonda) UE5 yolunu (D05/D13) değiştirmez; yeni özellik eklenmez, korunur. İçerik/katalog araştırması UE Data Asset/JSON kataloğuna akar. Web prototipinin akıbeti (arşiv, ayrı depo) kurucu onayı bekler.
+- D29 (kurucu, 28.11.2026): Claude projesinde 22–23.11'de başlatılan React/Vite web prototipi (eski klonda, `Documents\GitHub\TerraForce`) UE5 yolunu (D05/D13) değiştirmez. Korunur, yeni özellik eklenmez, bu depoya girmez. Yerel kopya dokunulmadan bırakıldı; ayrıca zip yedeği alındı. İçerik/katalog araştırması UE Data Asset/JSON kataloğuna akar.

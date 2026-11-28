@@ -19,7 +19,7 @@ Bulgular:
 - Yerel web prototipi ve Master Tree'ye dokunulmadı.
 
 ## Sonraki iş
-1. Kurucu onayıyla bu dalın incelenip `main`'e alınması (PR). Otomatik merge/reset/force push yok.
+1. (Tamamlandı) PR #1 ve #2 `main`'e alındı. Yerel klonlar henüz güncellenmedi: web klonunda pull/checkout yapılmaz; UE klonu temiz durumdayken `git pull` ile güncellenir.
 2. TF-000'ı kapatmak: `tools/tf000/TF000_Incele.cmd` çıktısı (donanım, UE/VS kurulumu, yerel git durumu).
 3. Ardından TF-001'i yeniden üretmeden doğrulamak (`tf build`). Yeni geliştirme yok.
 4. Master Tree'ye dokunma. Her pakette tarih, commit, sonuç, risk, sonraki görev, gerekli karar ekle.
@@ -29,7 +29,7 @@ Bulgular:
 - Yapıldı: serene commit'leri v2 belgelerinin üstüne uygulandı; karar numaraları D23–D27'ye taşındı, D28–D29 eklendi; `en.json` varsayılan metin dili yapıldı (`tr.json` yerelleştirme olarak kalır, doğrulayıcı anahtar eşitliğini denetler); BACKLOG durum notları işlendi; `.ps1`/`.cmd` satır sonu normalleştirildi.
 - Test: yukarıdaki Unreal'siz kontroller geçti. C++ değişikliği tek satır (`LoadStrings("en")`); derlenmedi.
 - Risk: Unreal API ayrıntılarında ilk `tf build`'de derleme hatası çıkabilir; iki yerel klonun aynı uzak depoyu paylaşması.
-- Gerekli karar: D29 (web prototipinin akıbeti); PR'ın `main`'e alınması.
+- Karar: D29 kurucu tarafından onaylandı (web prototipi korunur, geliştirilmez, depoya girmez). PR #1 ve #2 kurucu onayıyla `main`'e alındı (sıra: #1, sonra #2).
 
 ### 2026-11-24 — TF-000 (kısmi)
 - Sonuç: uzak repo ve Claude bulut ortamı incelendi; yerel PC/repo için salt okunur betik eklendi (`tools/tf000/`). Ayrıntı: `reports/TF-000.md`.
