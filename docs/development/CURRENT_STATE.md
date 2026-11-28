@@ -1,4 +1,6 @@
 # Güncel durum — 28.11.2026
+> Tek durum özeti bu dosyadır (D28 güncellemesi). Notion ve Claude proje notları buraya bağlantı verir.
+
 **TF-000 kapandı (28.11 14:41, betik çıktısı):** UE 5.7.4 ve VS 2026 (C++ oyun iş yükü) kurulu; Windows SDK, Python ve CMake bulunamadı. Web klonunda `main` henüz commit içermiyor (12 izlenmeyen dosya). Ayrıntı: `reports/TF-000.md` §9.
 
 GitHub dokümantasyonu v2.0 (UE5, 2.5D Gameplay First, İngilizce, hazırlanmış gerçek bölgeler ve Realtor, geniş ekonomi/aile/hospitality kuralları) ile `claude/serene-lamport-3x9203` dalındaki TF-001..004 kodu bu dalda (`integration/v2-reconcile`) birleştirildi. Oyun özelliği tamamlanmış sayılmaz.
@@ -32,6 +34,9 @@ Bulgular:
 **Açık tasarım çakışması (karar değil):** kurucunun Notion "Planlananlar" notu (27.11) "Gece/Gündüz olmayacak, sadece mevsimler ve full gündüz" diyor; `GAME_VISION.md` gece/gündüz içeriyor. Ekip sorusu Notion "Ekipten Beklenenler"de açık. Karar gelene kadar GAME_VISION değişmez; M0'da yalnız sabit güneş var.
 
 **Risk:** Notion çalışma alanının ücretsiz blok sınırı doldu; AI'ların Notion'a yazması 01.12.2026'dan sonra durabilir (ekip kararı bekliyor). GitHub kayıtları bundan etkilenmez.
+
+## Yerel Claude Code hazırlığı (kurulum ekip kararı bekliyor)
+`.claude/settings.json` eklendi: kurulursa Claude `tf` komutlarını ve okuma/commit işlerini sormadan yapar; push/pull/dal değiştirme sorar; silme, reset, clean, stash, force push ve web klonuna yazma yasak. Kurulum adımları `TOOL_SETUP.md` §4. TF-000 betiği: Windows SDK'yı kayıt defterinden de arar, hiç commit olmayan klonda hata yığını yerine tek satır yazar, son fetch zamanını gösterir.
 
 ## Sonraki iş
 1. (Tamamlandı) PR #1 ve #2 `main`'e alındı. Yerel klonlar henüz güncellenmedi: web klonunda pull/checkout yapılmaz; UE klonu temiz durumdayken `git pull` ile güncellenir.
