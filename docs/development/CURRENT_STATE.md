@@ -1,4 +1,6 @@
 # Güncel durum — 28.11.2026
+**TF-000 kapandı (28.11 14:41, betik çıktısı):** UE 5.7.4 ve VS 2026 (C++ oyun iş yükü) kurulu; Windows SDK, Python ve CMake bulunamadı. Web klonunda `main` henüz commit içermiyor (12 izlenmeyen dosya). Ayrıntı: `reports/TF-000.md` §9.
+
 GitHub dokümantasyonu v2.0 (UE5, 2.5D Gameplay First, İngilizce, hazırlanmış gerçek bölgeler ve Realtor, geniş ekonomi/aile/hospitality kuralları) ile `claude/serene-lamport-3x9203` dalındaki TF-001..004 kodu bu dalda (`integration/v2-reconcile`) birleştirildi. Oyun özelliği tamamlanmış sayılmaz.
 
 ## Kanıt durumu
@@ -20,8 +22,8 @@ Bulgular:
 
 ## Sonraki iş
 1. (Tamamlandı) PR #1 ve #2 `main`'e alındı. Yerel klonlar henüz güncellenmedi: web klonunda pull/checkout yapılmaz; UE klonu temiz durumdayken `git pull` ile güncellenir.
-2. TF-000'ı kapatmak: `tools/tf000/TF000_Incele.cmd` çıktısı (donanım, UE/VS kurulumu, yerel git durumu).
-3. Ardından TF-001'i yeniden üretmeden doğrulamak (`tf build`). Yeni geliştirme yok.
+2. (Tamamlandı) TF-000 kapandı: betik çıktısı `reports/TF-000.md` §9'da.
+3. Şimdi: UE klonunu `main`'e al → Windows SDK kontrolü → `tf setup`, `tf build`, `tf map`, `tf smoke` ile TF-001'i yeniden üretmeden doğrula. Yeni geliştirme yok.
 4. Master Tree'ye dokunma. Her pakette tarih, commit, sonuç, risk, sonraki görev, gerekli karar ekle.
 
 ## Günlük

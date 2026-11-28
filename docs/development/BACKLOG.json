@@ -8,8 +8,8 @@
       "title": "Ortam ve repo incelemesi",
       "depends_on": [],
       "acceptance": "Araç/donanım, yerel ve remote Git durumu, mevcut prototip, engeller ve onay gerektiren kararlar raporlandı.",
-      "status": "in_progress",
-      "note": "Kısmi: uzak repo, bulut ortamı ve iki yerel klonun yapısı incelendi (28.11, salt okunur). Yerel git status, donanım ve UE/VS kurulumu doğrulanmadı. Bkz. reports/TF-000.md."
+      "status": "completed",
+      "note": "Kanıt: 28.11.2026 14:41 TF000_Incele.cmd çıktısı (Windows 11, Ryzen 7 5700X, 15.9 GB RAM, RTX 4060 8 GB, C: 155 GB boş, UE 5.7.4, VS 2026 + C++ oyun iş yükü, iki klonun git durumu). Açık riskler: Windows SDK, Python ve CMake bulunamadı. Bkz. reports/TF-000.md §9."
     },
     {
       "id": "TF-001",
