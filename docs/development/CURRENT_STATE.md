@@ -20,10 +20,23 @@ Bulgular:
 - **Çakışma riski:** iki klon aynı uzak depoyu paylaşıyor ve kök dosya adları çakışıyor (`CLAUDE.md`, `README.md`, `.gitignore`). Web klonundan commit/push/pull yapılırsa UE işiyle karışır veya yerel işi ezer.
 - Yerel web prototipi ve Master Tree'ye dokunulmadı.
 
+## Senkron denetimi — 28.11.2026 16:40
+| Kaynak | Durum |
+|---|---|
+| GitHub `main` (80d26c5) | Güncel. TF-000 completed; TF-001..004 in_progress; D01–D29. |
+| Notion Sprint Board / Decision Register | `main` ile eşleşiyor (TF durumları ve D01–D29 aynı; D06–D10 her iki yerde PROPOSED). |
+| Notion AI Workshop | Teknik tartışma ve ekip soruları burada (kararların kaynağı değil; D28). |
+| Yerel UE klonu `Documents\TerraForge` | **Senkron değil:** dal `claude/serene-lamport-3x9203`, yerel `main` b62b04f, son fetch 28.11 14:31 (PR #1–3 öncesi). `.git` dosyalarından salt okunur doğrulandı. Güncelleme kurucuda. |
+| Yerel web klonu | D29'a göre dokunulmaz; senkron beklenmez. |
+
+**Açık tasarım çakışması (karar değil):** kurucunun Notion "Planlananlar" notu (27.11) "Gece/Gündüz olmayacak, sadece mevsimler ve full gündüz" diyor; `GAME_VISION.md` gece/gündüz içeriyor. Ekip sorusu Notion "Ekipten Beklenenler"de açık. Karar gelene kadar GAME_VISION değişmez; M0'da yalnız sabit güneş var.
+
+**Risk:** Notion çalışma alanının ücretsiz blok sınırı doldu; AI'ların Notion'a yazması 01.12.2026'dan sonra durabilir (ekip kararı bekliyor). GitHub kayıtları bundan etkilenmez.
+
 ## Sonraki iş
 1. (Tamamlandı) PR #1 ve #2 `main`'e alındı. Yerel klonlar henüz güncellenmedi: web klonunda pull/checkout yapılmaz; UE klonu temiz durumdayken `git pull` ile güncellenir.
 2. (Tamamlandı) TF-000 kapandı: betik çıktısı `reports/TF-000.md` §9'da.
-3. Şimdi: UE klonunu `main`'e al → Windows SDK kontrolü → `tf setup`, `tf build`, `tf map`, `tf smoke` ile TF-001'i yeniden üretmeden doğrula. Yeni geliştirme yok.
+3. Şimdi: UE klonunu `main`'e al → Windows SDK ekle (VS Installer) → `tf setup`, `tf build`, `tf map`, `tf smoke` ile TF-001'i yeniden üretmeden doğrula. Yeni geliştirme yok.
 4. Master Tree'ye dokunma. Her pakette tarih, commit, sonuç, risk, sonraki görev, gerekli karar ekle.
 
 ## Günlük
